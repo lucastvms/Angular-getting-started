@@ -1,0 +1,8 @@
+<p *ngIf="product && product.price > 700 else elseBlock">
+  <button [ngStyle] = "{'background-color': 'Green'}">Notify Me</button>
+</p>
+<ng-template #elseBlock>
+  <span>
+    <p [ngStyle] = "{'padding-top': '0px', 'margin-top':'2px', 'color': 'red'}"> Price over 700 </p>
+  </span>
+</ng-template>
